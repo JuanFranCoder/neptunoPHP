@@ -28,6 +28,9 @@
 				<input type="submit" value="Buscar" />
 			</form>
 
+		<!-- Botón insertar cliente -->
+			<input style="width:140px;" type="button" value="Insertar Cliente" onClick="window.location = 'formClientes.php'" />
+
         <!-- Tabla de clientes -->
 <?php include('php/clientesDB.php') ?>
 		<!-- Footer -->
