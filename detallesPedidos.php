@@ -1,3 +1,6 @@
+<?php
+	include 'sesion.php';
+?>
 <!DOCTYPE HTML>
 <!--
 	Eventually by HTML5 UP
@@ -15,13 +18,17 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
+		<?php echo mostrarLogin();?>
 
 		<!-- Header -->
 			<header id="header">
-				<h1>Neptuno</h1>
+				<a href="./"><h1>Neptuno</h1></a>
 				<p>Empresa dedicada a la comercialización de productos de alimentación <a href="http://html5up.net">HTML5 UP</a>.</p>
 			</header>
 
+		<!-- volver a listado de empleados -->
+			<a href="./productos.php">Volver al listado de productos</a>
+			
         <!-- Tabla de clientes -->
 <?php include('php/detallesPedidosDB.php') ?>
 		<!-- Footer -->

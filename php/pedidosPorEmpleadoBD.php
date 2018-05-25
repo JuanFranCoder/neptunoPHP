@@ -11,7 +11,6 @@
     <tbody>
 <?php
 include 'conexionDB.php';
-include 'importeTotalPedidoBD.php';
 
 $vIdEmpleado = isset($_GET['IdEmpleado']) ? $_GET['IdEmpleado'] : '';
 $vIdCliente = isset($_POST['IdCliente']) ? $_POST['IdCliente'] : '';

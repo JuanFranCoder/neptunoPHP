@@ -26,6 +26,7 @@ try {
             <TD><?php print $row['NombreCompany'] ?></TD>
             <TD><?php print $row['NombreContacto'] ?></TD>
             <TD><?php print $row['CargoContacto'] ?></TD>
+            <TD><a href="formClientes.php?idCliente=<?php print $row['IdCliente']?>">Editar</a></TD>
         </TR>
 
     <?php }

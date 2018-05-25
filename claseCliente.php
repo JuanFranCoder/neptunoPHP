@@ -29,7 +29,7 @@ class Cliente{
         $this->saldo = null;
     }
 */
-/*
+
     public function __construct($idCliente, $nombreCompany, $nombreContacto, $pais, $telefono, $saldo = null){
         $this->IdCliente = $idCliente;
         $this->NombreCompany = $nombreCompany;
@@ -38,12 +38,12 @@ class Cliente{
         $this->Telefono = $telefono;
         $this->Saldo = $saldo;
     }
-*/
+/*
     public function __construct($idCliente, $nombreCompany){
         $this->IdCliente = $idCliente;
         $this->NombreCompany = $nombreCompany;
     }
-
+*/
     public function convertObjectToArray(){
         return get_object_vars($this);
     }

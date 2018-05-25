@@ -13,6 +13,7 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
   </head>
   <body>
+    <?php include 'sesion.php'; echo mostrarLogin();?>
     <!-- Header -->
     <header id="header">
       <h1 style="text-align: center;">Neptuno</h1>
@@ -21,7 +22,7 @@
       </p> 
         <ul style="list-style-type:none;display:flex;justify-content:center">
           <li style="display: inline; float:left; margin:0 20px;"><a href="clientes.php"
-              title="Listado de clietnes"><button name="clientes" value="Clientes">Clientes</button></a></li>
+              title="Listado de clientes"><button name="clientes" value="Clientes">Clientes</button></a></li>
           <li style="display: inline; float:left; margin:0 20px;"><a href="categorias.php"
               title="Listado de categorías"><button name="categorias" value="Categorías">Categorías</button></a></li>
           <li style="display: inline; float:left; margin:0 20px;"><a href="productos.php"
