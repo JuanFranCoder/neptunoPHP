@@ -25,6 +25,7 @@ try {
             <TD><?php print $row['IdProducto'] ?></TD>
             <TD><a href="detallesPedidos.php?idProducto=<?php echo $row['IdProducto']; ?>"><?php print $row['NombreProducto'] ?></a></TD>
             <TD><?php print $row['PrecioUnidad'] ?></TD>
+            <TD><a href="cestaCompra.php?idProducto=<?php echo $row['IdProducto'];?>"><?php print "Añadir a la cesta"?></a></TD>
         </TR>
 
     <?php endforeach;

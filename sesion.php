@@ -2,7 +2,6 @@
     session_start();
 
     if(isset($_GET['logout'])){
-        //unset($_GET['logout']);
         session_destroy();
         header('Location: ./');
 
@@ -12,13 +11,19 @@
         header('Location: ./login.php');
     }
 
-    function mostrarLogin(){
+    if(isset($_GET['vaciarCesta'])){
+        unset($_SESSION['cestaCompra']);
+        header('Location: ./cestaCompra.php');
+
+    }
+    
+    function mostrarLogin(){        
         if(isset($_SESSION['idEmpleado'])){
         ?>
         <div>
             <span id="infoUsuario">El usuario <span class="user"><?php echo $_SESSION['nombre'] . ' ' . $_SESSION['apellidos'];?></span> está autenticado.</span>
+            <a href="./cestaCompra.php">Ir al carrito</a>
             <span id="cerrarSesion">
-                <!--<a class="volver" href="./">Volver a inicio</a>-->
                 <a class="logout" href="./sesion.php?logout=true">Log Out</a>
             </span>
         </div>
@@ -27,8 +32,8 @@
         ?>
             <div>
                 <span id="infoUsuario">No hay ningún usuario autenticado.</span>
+                <a href="./cestaCompra.php">Ir al carrito</a>
                 <span id="cerrarSesion">
-                    <!--<a class="volver" href="./">Volver a inicio</a>-->
                     <a class="login" href="./sesion.php?login=true">Log In</a>
                 </span>
             </div>
@@ -37,9 +42,6 @@
     ?>
 
 <style>
-div {
-    
-}
 #infoUsuario {
     float: left;
     color:white;
